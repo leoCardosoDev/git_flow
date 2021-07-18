@@ -31,6 +31,10 @@
 #### Encerrar uma feature
     git flow feature finish nome_da_feature
 
+### Criando release
+    git flow release start 0.1.2
+#### Encerrando a release
+    git flow release finish 0.1.2
 
 ## Assinaturas de Commits
 
@@ -53,3 +57,8 @@
 ### Criando assinaturas para tags
     git config --global tag.gpgSign true
 
+### Editando a gpg
+    gpg --edit-key rsa4096/
+        adduid
+        trust
+        save
