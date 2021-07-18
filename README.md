@@ -30,3 +30,26 @@
     git flow feature start nome_da_feature
 #### Encerrar uma feature
     git flow feature finish nome_da_feature
+
+
+## Assinaturas de Commits
+
+### Listando chaves gpg
+    gpg --list-secret-key --keyid-form LONG
+### Criando chaves gpg
+    gpg --full-generate-key
+
+### Exportando chave publica gerada
+    gpg --armor --export chave_rsa4096/
+### Adicionando chave na config do git
+    git config --global user.signingkey chave_rsa4096/
+
+### Adicionado variavel de ambiente tty
+    export GPG_TTY=$(tty)
+    -> adicionar no bash profile ou zsh profile
+
+### Criando assinaturas para commits
+    git config --global commit.gpgsign true
+### Criando assinaturas para tags
+    git config --global tag.gpgSign true
+
